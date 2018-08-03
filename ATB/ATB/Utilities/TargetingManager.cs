@@ -30,11 +30,11 @@ namespace ATB.Utilities
 
         private static async Task<bool> TargetingManagerTask()
         {
-            if (!MainSettingsModel.Instance.UseAutoTargeting || MainSettingsModel.Instance.AutoTargetSelection == AutoTargetSelection.None) return false;
+            if (!MainSettingsModel.Instance.UseAutoTargeting || MainSettingsModel.Instance.AutoTargetSelection == AutoTargetSelection.无) return false;
 
             switch (MainSettingsModel.Instance.AutoTargetSelection)
             {
-                case AutoTargetSelection.NearestEnemy:
+                case AutoTargetSelection.最近目标:
                     if (!Core.Player.HasTarget || PulseCheck())
                     {
                         var target = GetClosestEnemy();
@@ -47,11 +47,11 @@ namespace ATB.Utilities
 
                     break;
 
-                case AutoTargetSelection.LowestCurrentHpTanked:
+                case AutoTargetSelection.当前血量最低战斗中:
                     if (Me.IsTank())
                     {
                         Logger.ATBLog("Yer a tank, Harry! Can't assist yerself!");
-                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.None;
+                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.无;
                         break;
                     }
 
@@ -73,7 +73,7 @@ namespace ATB.Utilities
                     }
                     break;
 
-                case AutoTargetSelection.LowestCurrentHp:
+                case AutoTargetSelection.当前血量最低:
                     if (!Core.Player.HasTarget || !Core.Player.CurrentTarget.CanAttack || PulseCheck())
                     {
                         var objs = GameObjectManager.GameObjects.Where(o => IsValidEnemy(o) && ((Character)o).InCombat);
@@ -89,11 +89,11 @@ namespace ATB.Utilities
                     }
                     break;
 
-                case AutoTargetSelection.LowestTotalHpTanked:
+                case AutoTargetSelection.总血量最低战斗中:
                     if (Me.IsTank())
                     {
                         Logger.ATBLog("Yer a tank, Harry! Can't assist yerself!");
-                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.None;
+                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.无;
                         break;
                     }
 
@@ -115,7 +115,7 @@ namespace ATB.Utilities
 
                     break;
 
-                case AutoTargetSelection.LowestTotalHp:
+                case AutoTargetSelection.总血量最低:
                     if (!Core.Player.HasTarget || !Core.Player.CurrentTarget.CanAttack || PulseCheck())
                     {
                         var objs = GameObjectManager.GameObjects.Where(o => IsValidEnemy(o) && ((Character)o).InCombat);
@@ -131,11 +131,11 @@ namespace ATB.Utilities
                     }
                     break;
 
-                case AutoTargetSelection.HighestCurrentHpTanked:
+                case AutoTargetSelection.当前血量最高战斗中:
                     if (Me.IsTank())
                     {
                         Logger.ATBLog("Yer a tank, Harry! Can't assist yerself!");
-                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.None;
+                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.无;
                         break;
                     }
 
@@ -157,7 +157,7 @@ namespace ATB.Utilities
                     }
                     break;
 
-                case AutoTargetSelection.HighestCurrentHp:
+                case AutoTargetSelection.当前血量最高:
                     if (!Core.Player.HasTarget || !Core.Player.CurrentTarget.CanAttack || PulseCheck())
                     {
                         var objs = GameObjectManager.GameObjects.Where(o => IsValidEnemy(o) && ((Character)o).InCombat);
@@ -173,11 +173,11 @@ namespace ATB.Utilities
                     }
                     break;
 
-                case AutoTargetSelection.HighestTotalHpTanked:
+                case AutoTargetSelection.总血量最高战斗中:
                     if (Me.IsTank())
                     {
                         Logger.ATBLog("Yer a tank, Harry! Can't assist yerself!");
-                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.None;
+                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.无;
                         break;
                     }
 
@@ -199,7 +199,7 @@ namespace ATB.Utilities
 
                     break;
 
-                case AutoTargetSelection.HighestTotalHp:
+                case AutoTargetSelection.总血量最高:
                     if (!Core.Player.HasTarget || !Core.Player.CurrentTarget.CanAttack || PulseCheck())
                     {
                         var objs = GameObjectManager.GameObjects.Where(o => IsValidEnemy(o) && ((Character)o).InCombat);
@@ -215,11 +215,11 @@ namespace ATB.Utilities
                     }
                     break;
 
-                case AutoTargetSelection.TankAssist:
+                case AutoTargetSelection.MT目标:
                     if (Me.IsTank())
                     {
                         Logger.ATBLog("Yer a tank, Harry! Can't assist yerself!");
-                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.None;
+                        MainSettingsModel.Instance.AutoTargetSelection = AutoTargetSelection.无;
                         break;
                     }
 

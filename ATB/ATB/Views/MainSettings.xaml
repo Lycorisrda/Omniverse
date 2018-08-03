@@ -29,29 +29,29 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <CheckBox Content="Pull" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UsePull, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Pause" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UsePause, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Smart Pull" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseSmartPull, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Auto-Face" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoFace, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Auto-Dialog" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoTalk, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Auto-Target" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoTargeting, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="拉怪" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UsePull, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="暂停" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UsePause, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="智能拉怪" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseSmartPull, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="自动面向" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoFace, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="自动对话" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoTalk, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="自动选择目标" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoTargeting, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                     <!--<CheckBox Content="Auto-TPS Adjust" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoTpsAdjust, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />-->
-                    <CheckBox Content="Enable Overlay" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseOverlay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Command="{Binding OverlayViewUpdate}" />
-                    <CheckBox Content="Output to Chatbox" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseOutputToEcho, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Auto-Accept Quest" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoQuest, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Mechanic Warnings" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseExtremeCaution, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Auto-Skip Cutscene" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoCutscene, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Auto Commence Duty" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.AutoCommenceDuty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Show Toast Messages" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseToastMessages, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Notify if Duty is Ready" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.AutoDutyNotify, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <CheckBox Content="Hide Overlay When Running" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.HideOverlayWhenRunning, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="启用Overlay" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseOverlay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Command="{Binding OverlayViewUpdate}" />
+                    <CheckBox Content="输出到聊天窗口" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseOutputToEcho, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="自动接受任务" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoQuest, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="副本机制提醒" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseExtremeCaution, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="跳过过场动画" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseAutoCutscene, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="自动确认副本" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.AutoCommenceDuty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="显示所有信息" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.UseToastMessages, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="副本准备时提醒" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.AutoDutyNotify, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <CheckBox Content="运行时隐藏Overlay" Margin="1" Style="{DynamicResource ATBCheckbox}" IsChecked="{Binding Settings.HideOverlayWhenRunning, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <controls:ATBNumeric Margin="2" HorizontalAlignment="Left" Width="260" MinValue="0" MaxValue="50" TextBlockValue="Max Distance to Get New Target:" Value="{Binding Settings.MaxTargetDistance, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <controls:ATBNumeric Margin="2" HorizontalAlignment="Left" Width="260" MinValue="0" MaxValue="5000" TextBlockValue="Auto Commence Delay:" Value="{Binding Settings.AutoCommenceDelay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <controls:ATBNumeric Margin="2" HorizontalAlignment="Left" Width="260" MinValue="0" MaxValue="240" TextBlockValue="TPS Adjust" Value="{Binding Settings.TpsAdjust, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <ComboBox Tag="Auto-Target Selection" Margin="2" Style="{DynamicResource ATBComboBox}" SelectedItem="{Binding Settings.AutoTargetSelection, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource AutoTargetSelection}}" HorizontalAlignment="Left" Width="260" />
-                    <Button Content="Change Combat Routine" Click="LaunchRoutineSelect" HorizontalAlignment="Center" VerticalAlignment="Top" Width="145" Margin="0,5,0,0" />
+                    <controls:ATBNumeric Margin="2" HorizontalAlignment="Left" Width="260" MinValue="0" MaxValue="50" TextBlockValue="离新目标的最远距离:" Value="{Binding Settings.MaxTargetDistance, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <controls:ATBNumeric Margin="2" HorizontalAlignment="Left" Width="260" MinValue="0" MaxValue="5000" TextBlockValue="自动确认副本延迟:" Value="{Binding Settings.AutoCommenceDelay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <controls:ATBNumeric Margin="2" HorizontalAlignment="Left" Width="260" MinValue="0" MaxValue="240" TextBlockValue="TPS调整" Value="{Binding Settings.TpsAdjust, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <ComboBox Tag="自动选择目标 模式" Margin="2" Style="{DynamicResource ATBComboBox}" SelectedItem="{Binding Settings.AutoTargetSelection, UpdateSourceTrigger=LostFocus}" ItemsSource="{Binding Source={StaticResource AutoTargetSelection}}" HorizontalAlignment="Left" Width="260" />
+                    <Button Content="切换战斗模块" Click="LaunchRoutineSelect" HorizontalAlignment="Center" VerticalAlignment="Top" Width="145" Margin="0,5,0,0" />
                 </StackPanel>
             </Grid>
         </StackPanel>

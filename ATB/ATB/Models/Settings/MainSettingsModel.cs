@@ -180,7 +180,7 @@ namespace ATB.Models
         private volatile AutoTargetSelection _autoTargetSelection;
 
         [Setting]
-        [DefaultValue(AutoTargetSelection.None)]
+        [DefaultValue(AutoTargetSelection.无)]
         public AutoTargetSelection AutoTargetSelection
         { get { return _autoTargetSelection; } set { _autoTargetSelection = value; OnPropertyChanged(); } }
 
@@ -191,53 +191,53 @@ namespace ATB.Models
         {
             switch (AutoTargetSelection)
             {
-                case AutoTargetSelection.None:
-                    AutoTargetSelection = AutoTargetSelection.NearestEnemy;
+                case AutoTargetSelection.无:
+                    AutoTargetSelection = AutoTargetSelection.最近目标;
                     return;
 
-                case AutoTargetSelection.NearestEnemy:
-                    AutoTargetSelection = AutoTargetSelection.LowestCurrentHpTanked;
-                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.LowestCurrentHp;
+                case AutoTargetSelection.最近目标:
+                    AutoTargetSelection = AutoTargetSelection.当前血量最低战斗中;
+                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.当前血量最低;
                     return;
 
-                case AutoTargetSelection.LowestCurrentHpTanked:
-                    AutoTargetSelection = AutoTargetSelection.LowestCurrentHp;
+                case AutoTargetSelection.当前血量最低战斗中:
+                    AutoTargetSelection = AutoTargetSelection.当前血量最低;
                     return;
 
-                case AutoTargetSelection.LowestCurrentHp:
-                    AutoTargetSelection = AutoTargetSelection.LowestTotalHpTanked;
-                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.LowestTotalHp;
+                case AutoTargetSelection.当前血量最低:
+                    AutoTargetSelection = AutoTargetSelection.总血量最低战斗中;
+                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.总血量最低;
                     return;
 
-                case AutoTargetSelection.LowestTotalHpTanked:
-                    AutoTargetSelection = AutoTargetSelection.LowestTotalHp;
+                case AutoTargetSelection.总血量最低战斗中:
+                    AutoTargetSelection = AutoTargetSelection.总血量最低;
                     return;
 
-                case AutoTargetSelection.LowestTotalHp:
-                    AutoTargetSelection = AutoTargetSelection.HighestCurrentHpTanked;
-                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.HighestCurrentHp;
+                case AutoTargetSelection.总血量最低:
+                    AutoTargetSelection = AutoTargetSelection.当前血量最高战斗中;
+                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.当前血量最高;
                     return;
 
-                case AutoTargetSelection.HighestCurrentHpTanked:
-                    AutoTargetSelection = AutoTargetSelection.HighestCurrentHp;
+                case AutoTargetSelection.当前血量最高战斗中:
+                    AutoTargetSelection = AutoTargetSelection.当前血量最高;
                     return;
 
-                case AutoTargetSelection.HighestCurrentHp:
-                    AutoTargetSelection = AutoTargetSelection.HighestTotalHpTanked;
-                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.HighestTotalHp;
+                case AutoTargetSelection.当前血量最高:
+                    AutoTargetSelection = AutoTargetSelection.总血量最高战斗中;
+                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.总血量最高;
                     return;
 
-                case AutoTargetSelection.HighestTotalHpTanked:
-                    AutoTargetSelection = AutoTargetSelection.HighestTotalHp;
+                case AutoTargetSelection.总血量最高战斗中:
+                    AutoTargetSelection = AutoTargetSelection.总血量最高;
                     return;
 
-                case AutoTargetSelection.HighestTotalHp:
-                    AutoTargetSelection = AutoTargetSelection.TankAssist;
-                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.None;
+                case AutoTargetSelection.总血量最高:
+                    AutoTargetSelection = AutoTargetSelection.MT目标;
+                    if (Me.IsTank()) AutoTargetSelection = AutoTargetSelection.无;
                     return;
 
-                case AutoTargetSelection.TankAssist:
-                    AutoTargetSelection = AutoTargetSelection.None;
+                case AutoTargetSelection.MT目标:
+                    AutoTargetSelection = AutoTargetSelection.无;
                     break;
             }
         }
@@ -252,17 +252,17 @@ namespace ATB.Models
 
     public enum AutoTargetSelection
     {
-        None,
-        NearestEnemy,
-        LowestCurrentHpTanked,
-        LowestCurrentHp,
-        LowestTotalHpTanked,
-        LowestTotalHp,
-        HighestCurrentHpTanked,
-        HighestCurrentHp,
-        HighestTotalHpTanked,
-        HighestTotalHp,
-        TankAssist
+        无,
+        最近目标,
+        当前血量最低战斗中,
+        当前血量最低,
+        总血量最低战斗中,
+        总血量最低,
+        当前血量最高战斗中,
+        当前血量最高,
+        总血量最高战斗中,
+        总血量最高,
+        MT目标,
     }
 
     public enum SelectedTheme
@@ -271,6 +271,6 @@ namespace ATB.Models
         Pink,
         Green,
         Red,
-        Yellow
+        Yellow,
     }
 }

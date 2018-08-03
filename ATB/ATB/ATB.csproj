@@ -58,11 +58,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GreyMagic">
-      <HintPath>..\..\..\..\OmniProjects\Omniverse\Kefka\Kefka\Libraries\GreyMagic.dll</HintPath>
+      <HintPath>E:\RebornBuddy\RBCN 64 for test\GreyMagic.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="RebornBuddy">
-      <HintPath>..\..\..\..\RB64\RebornBuddy.exe</HintPath>
+    <Reference Include="RebornBuddy, Version=1.0.189.0, Culture=neutral, PublicKeyToken=48d7174f8a943034, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\RebornBuddy\RBCN 64 for test\RebornBuddy.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
